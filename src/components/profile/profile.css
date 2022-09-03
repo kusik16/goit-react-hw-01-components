@@ -1,0 +1,81 @@
+.profile {
+	background-color: #fff;
+	width: 300px;
+	height: 380px;
+	margin: 50px auto;
+	border-radius: 5px;
+	border: 1px solid #bdbdbd;
+}
+
+.description {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 280px;
+}
+
+.avatar {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: #f0f0f0;
+	margin-top: 20px;
+}
+
+.name {
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.tag {
+	opacity: 0.5;
+	margin-top: 15px;
+}
+
+.location {
+	opacity: 0.5;
+	margin-top: 15px;
+}
+
+.stats {
+	display: flex;
+	height: 100px;
+}
+
+.stats__item {
+	list-style-type: none;
+	width: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #ececec;
+}
+
+.stats__item:first-child {
+	border-radius: 0px 0px 0px 5px;
+}
+
+.stats__item:last-child {
+	border-radius: 0px 0px 5px 0px;
+}
+
+.stats__item:nth-child(odd) {
+	border-top: 1px solid #bdbdbd;
+}
+
+.stats__item:nth-child(even) {
+	border-top: 1px solid #bdbdbd;
+	border-left: 1px solid #bdbdbd;
+	border-right: 1px solid #bdbdbd;
+}
+
+.stats__item-label {
+	opacity: 0.5;
+	margin-bottom: 5px;
+}
+
+.stats__item-quantity {
+	font-weight: bold;
+}

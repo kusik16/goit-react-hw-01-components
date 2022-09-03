@@ -1,0 +1,30 @@
+.statistics {
+	width: 400px;
+	margin: 50px auto;
+	background-color: #fff;
+}
+
+.statistics__list {
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: repeat(4, 100px);
+	align-items: center;
+}
+
+.statistics__list_item {
+	height: 100px;
+	width: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+
+.statistics__list_item-label {
+	margin-bottom: 5px;
+}
+
+.statistics__list_item-percentage {
+	font-size: 25px;
+}
