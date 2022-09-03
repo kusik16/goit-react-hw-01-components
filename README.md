@@ -1,5 +1,3 @@
-https://kusik16.github.io/goit-react-hw-01-components/
-
 **Read in other languages: [Русский](README.md), [Polska](README.pl.md).**
 
 # React homework template
