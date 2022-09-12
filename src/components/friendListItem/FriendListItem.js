@@ -1,22 +1,23 @@
 import PropTypes from 'prop-types';
-import './friendListItem.css';
+
+import friendListItem from './FriendListItem.module.css';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
 	return (
-		<li className="friend-list__item">
+		<li className={friendListItem.item}>
 			<span
 				className={
 					isOnline
-						? 'friend-list__item_status online'
-						: 'friend-list__item_status'
+						? `${friendListItem.status} ${friendListItem.online}`
+						: friendListItem.status
 				}
 			></span>
 			<img
-				className="friend-list__item_avatar"
+				className={friendListItem.avatar}
 				src={avatar}
 				alt="User avatar"
 			/>
-			<p className="friend-list__item_name">{name}</p>
+			<p className={friendListItem.name}>{name}</p>
 		</li>
 	);
 };
@@ -27,4 +28,5 @@ FriendListItem.propTypes = {
 	avatar: PropTypes.string.isRequired,
 	name: PropTypes.string.isRequired,
 	isOnline: PropTypes.bool.isRequired,
+	id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };

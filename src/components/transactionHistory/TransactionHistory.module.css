@@ -1,4 +1,4 @@
-.transaction-history {
+.container {
 	width: 900px;
 	margin: 0 auto;
 	text-align: center;
@@ -26,21 +26,21 @@ thead {
 	color: white;
 }
 
-.transaction-history__item:nth-child(2n + 1) {
+.item:nth-child(2n + 1) {
 	background-color: #fff;
 }
-.transaction-history__item:nth-child(2n + 2) {
+.item:nth-child(2n + 2) {
 	background-color: #ecf1f3;
 }
 
-.transaction-history__item_type {
+.itemType {
 	display: flex;
 	justify-content: left;
 	margin: 0 auto;
 	width: 20%;
 }
 
-.transaction-history__item_amount {
+.itemAmount {
 	display: flex;
 	justify-content: right;
 	margin: 0 auto;

@@ -1,17 +1,17 @@
-.statistics {
+.container {
 	width: 400px;
 	margin: 50px auto;
 	background-color: #fff;
 }
 
-.statistics__list {
+.list {
 	list-style-type: none;
 	display: grid;
 	grid-template-columns: repeat(4, 100px);
 	align-items: center;
 }
 
-.statistics__list_item {
+.item {
 	height: 100px;
 	width: 100px;
 	display: flex;
@@ -21,10 +21,10 @@
 	color: #fff;
 }
 
-.statistics__list_item-label {
+.label {
 	margin-bottom: 5px;
 }
 
-.statistics__list_item-percentage {
+.percentage {
 	font-size: 25px;
 }

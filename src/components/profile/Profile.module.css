@@ -1,4 +1,4 @@
-.profile {
+.container {
 	background-color: #fff;
 	width: 300px;
 	height: 380px;
@@ -43,7 +43,7 @@
 	height: 100px;
 }
 
-.stats__item {
+.item {
 	list-style-type: none;
 	width: 100px;
 	display: flex;
@@ -53,29 +53,29 @@
 	background-color: #ececec;
 }
 
-.stats__item:first-child {
+.item:first-child {
 	border-radius: 0px 0px 0px 5px;
 }
 
-.stats__item:last-child {
+.item:last-child {
 	border-radius: 0px 0px 5px 0px;
 }
 
-.stats__item:nth-child(odd) {
+.item:nth-child(odd) {
 	border-top: 1px solid #bdbdbd;
 }
 
-.stats__item:nth-child(even) {
+.item:nth-child(even) {
 	border-top: 1px solid #bdbdbd;
 	border-left: 1px solid #bdbdbd;
 	border-right: 1px solid #bdbdbd;
 }
 
-.stats__item-label {
+.label {
 	opacity: 0.5;
 	margin-bottom: 5px;
 }
 
-.stats__item-quantity {
+.quantity {
 	font-weight: bold;
 }

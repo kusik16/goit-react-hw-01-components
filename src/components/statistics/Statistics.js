@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import './statistics.css';
+import statistics from './Statistics.module.css';
 
 const getDarkColor = () => {
 	var color = '#';
@@ -12,22 +12,20 @@ const getDarkColor = () => {
 
 const Statistics = ({ title, stats }) => {
 	return (
-		<section className="statistics">
-			{title ? <h2 className="statistics__title">{title}</h2> : null}
+		<section className={statistics.container}>
+			{title && <h2 className={statistics.title}>{title}</h2>}
 
-			<ul className="statistics__list">
-				{stats.map(stat => {
+			<ul className={statistics.list}>
+				{stats.map(({ id, label, percentage }) => {
 					return (
 						<li
-							key={stat.id}
+							key={id}
 							style={{ backgroundColor: getDarkColor() }}
-							className="statistics__list_item"
+							className={statistics.item}
 						>
-							<span className="statistics__list_item-label">
-								{stat.label}
-							</span>
-							<span className="statistics__list_item-percentage">
-								{stat.percentage}%
+							<span className={statistics.label}>{label}</span>
+							<span className={statistics.percentage}>
+								{percentage}%
 							</span>
 						</li>
 					);
@@ -41,5 +39,16 @@ export default Statistics;
 
 Statistics.propTypes = {
 	title: PropTypes.string,
-	stats: PropTypes.array.isRequired,
+	stats: PropTypes.arrayOf(
+		PropTypes.shape({
+			id: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+				.isRequired,
+			label: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+				.isRequired,
+			percentage: PropTypes.oneOfType([
+				PropTypes.string,
+				PropTypes.number,
+			]).isRequired,
+		})
+	),
 };
