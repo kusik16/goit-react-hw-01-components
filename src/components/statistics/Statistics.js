@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import statistics from './Statistics.module.css';
 
 const getDarkColor = () => {
-	var color = '#';
+	let color = '#';
 	for (let i = 0; i < 6; i++) {
 		color += Math.floor(Math.random() * 10);
 	}
@@ -41,14 +41,9 @@ Statistics.propTypes = {
 	title: PropTypes.string,
 	stats: PropTypes.arrayOf(
 		PropTypes.shape({
-			id: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-				.isRequired,
-			label: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-				.isRequired,
-			percentage: PropTypes.oneOfType([
-				PropTypes.string,
-				PropTypes.number,
-			]).isRequired,
+			id: PropTypes.string.isRequired,
+			label: PropTypes.string.isRequired,
+			percentage: PropTypes.number.isRequired,
 		})
 	),
 };
